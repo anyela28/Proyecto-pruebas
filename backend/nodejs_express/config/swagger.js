@@ -14,7 +14,7 @@ const options = {
     },
     servers: [
       {
-        url: 'http://10.1.195.195:3000',
+        url: 'http://192.168.1.8:3000',
         description: 'Servidor local'
       }
     ],

@@ -10,4 +10,19 @@ module.exports = {
   },
   testMatch: ['**/tests/**/*.test.(js|jsx)'],
   verbose: true,
+
+    // CONFIGURACIÓN DE REPORTES
+  reporters: [
+    'default', // Muestra el resumen en consola
+    [
+      'jest-html-reporters',
+      {
+        publicPath: './reports/frontend', // Carpeta donde se guardará el HTML
+        filename: 'reporte-frontend.html',
+        expand: true,
+        pageTitle: 'Reporte de Pruebas - Frontend React',
+        hideIcon: false,
+      },
+    ],
+  ],
 };

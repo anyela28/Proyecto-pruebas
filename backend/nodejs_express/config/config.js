@@ -1,4 +1,6 @@
-require('dotenv').config();
+const envFile = process.env.NODE_ENV === 'test' ? '.env.test' : '.env';
+require('dotenv').config({ path: envFile });
+
 const mysql = require('mysql');
 const db = mysql.createConnection({
   host: process.env.DB_HOST,
@@ -9,6 +11,6 @@ const db = mysql.createConnection({
 });
 db.connect(function(err) {
   if (err) throw err;
-  console.log('Base de datos conectada')
+  console.log(`Base de datos conectada: ${process.env.DB_NAME}`); // Muestra a qué BD se conectó
 });
 module.exports = db;

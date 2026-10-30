@@ -55,6 +55,6 @@ app.use((err, req, res, next) => {
     res.status(err.status || 500).send(err.stack);
 });
 
-console.log('📚 Swagger disponible en: http://10.1.195.195:3000/api-docs');
+console.log('📚 Swagger disponible en: http://192.168.1.8:3000/api-docs');
 
 module.exports = app;
